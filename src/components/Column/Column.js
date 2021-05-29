@@ -37,8 +37,8 @@ class Column extends React.Component {
           <Card key={key} {...cardProps} />
         ))}  
 
-        <div className={styles.Creator}>
-        <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
+        <div className={styles.creator}>
+        <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div> 
       </section>
     )
