@@ -3,12 +3,9 @@ import {getCardsForList} from '../../../redux/cardsRedux';
 import SearchResults from './SearchResults';
 
 const mapStateToProps = (state, props) => {
-  const id = props.match.params.id;
-  const filteredLists = state.lists.filter(list => list.id == id);
-  const listParams = filteredLists[0] || {}; 
+  const id = props.match.params.id; 
   
   return {
-    ...listParams,
     cards: getCardsForList(state, id),
   };
 };
